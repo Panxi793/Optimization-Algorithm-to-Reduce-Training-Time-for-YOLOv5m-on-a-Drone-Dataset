@@ -1,0 +1,1 @@
+# Optimization-Algorithm-to-Reduce-Training-Time-for-YOLOv5m-on-a-Drone-Dataset
