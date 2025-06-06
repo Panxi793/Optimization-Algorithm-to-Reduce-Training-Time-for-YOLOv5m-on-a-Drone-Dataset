@@ -1,0 +1,7 @@
+names:
+  0: car
+  1: motorbike
+nc: 2
+path: C:\Users\Anton\Desktop\UP\3rd Yr 2nd Sem\Yolo5v Drone\dataset\drone_dataset
+train: C:\Users\Anton\Desktop\UP\3rd Yr 2nd Sem\Yolo5v Drone\yolo_configs\drone_original\train.txt
+val: C:\Users\Anton\Desktop\UP\3rd Yr 2nd Sem\Yolo5v Drone\yolo_configs\drone_original\val.txt
