@@ -1,0 +1,38 @@
+Original Dataset:
+  Images: 16363
+  Labels: 155158
+
+Preprocessed Dataset:
+  Images: 13368
+  Labels: 42289
+
+Ratios:
+  Image increase: 0.817x (81.7%)  
+  Label percentage: 0.273x (27.3%)
+
+Paper Results:
+  Image increase: 0.853x (85.3%)  
+  Label percentage: 0.277x (27.7%)
+
+Comparison:
+✓ Image ratio matches paper (85.3%)
+✓ Label ratio matches paper (27.7%)
+
+**Scripts**
+
+python yolov5/train.py --data yolo_configs/drone_preprocessed/drone_preprocessed.yaml --epochs 20 --batch-size 8 --weights yolov5m.pt --device 0 --project runs/train --name preprocessed_drone_yolov5m --save-period -1
+
+
+**Original Dataset**  (train/org and val/org) Yolov5m
+20 epochs completed in 5.542 hours.
+                  Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 1361/1361 [05:01<00:00,  4.52it/s]
+                   all      16324     155158      0.918      0.864      0.907      0.666
+                   car      16324     137432      0.922       0.93      0.971      0.793
+             motorbike      16324      17726      0.914      0.798      0.844      0.539
+
+**Preprocessed Dataset** (train/prepro and val/prepro) Yolov5m
+20 epochs completed in 4.278 hours.
+                  Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 836/836 [03:38<00:00,  3.83it/s]
+                   all      13368      42289      0.989      0.993      0.994       0.79
+                   car      13368      35413      0.992      0.994      0.994       0.83
+             motorbike      13368       6876      0.985      0.992      0.993      0.749
